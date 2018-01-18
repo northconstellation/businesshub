@@ -7,18 +7,6 @@ AddDefaultCharset utf8
 
 
 
-<IfModule mod_rewrite.c>
-Options +FollowSymLinks
-RewriteEngine on
-RewriteRule ^(.*)$ http://businesshub.kiev.ua/$1 [R=301,L]
-</IfModule>
-
-
-Redirect /woman http://businesshub.kiev.ua/
-
-
-
-
 
 
 
