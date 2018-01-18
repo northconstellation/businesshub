@@ -1,0 +1,323 @@
+/***************************************************************
+*
+*	������:     http://SergeyChunkevich.com
+*	�� ������:  http://sergeychunkevich.com/RuBizModal-Article
+*
+****************************************************************/
+
+
+body {  }
+#brain { width:400px; height:365px; position:absolute; top:45%; left:50%; margin-top:-250px; margin-left:-200px; }
+#info { background:#fefefe; width:700px; position:absolute; top:65%; left:50%; margin-left:-350px; border:2px solid #ccc; border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px; }
+	#info center { color:#555; font-size:18px; padding:25px 30px 10px 30px; line-height:20px; }
+	#info .info {	width:70px; position:absolute; top:-40px; left:50%; margin-left:-35px; }
+
+
+
+/* ================================= RuBizModal ================================= */
+#RuBizModal { width:820px; position:fixed; display:none;
+	border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; box-shadow:0.07em 0em 2em #000; }
+#RuBizModal .RuBizModal_main { width:100%;  position:relative; overflow:auto; padding: 7px 0; }
+	#RuBizModal #close { position:absolute; left:790px; width:19px; height:19px; top: 10px; }
+	#RuBizModal #close #rbm-close { width:19px; height:19px; border:0; display:inline-block;
+		background:url('data:image/gif;base64,R0lGODlhEgASAKIHAHd3d93d3bu7u4iIiKqqqu7u7v///////yH5BAEAAAcALAAAAAASABIAAANReLrc/pCJR6AwVWJ3zVbdB3pkFRpFphCkx5LF4AxtG0NDUd8R7emyyOmnaoQKuhLnh8wxiwIdMiDLIQsBAIMwDR4GAay2QaA2wGNHcZGOuA8JADs='); }
+
+#simplemodal-overlay {
+    background-color: #FFFEFE !important;
+}
+
+/***************************************************************
+*
+*	������:     http://SergeyChunkevich.com
+*	�� ������:  http://sergeychunkevich.com/RuBizModal-Article
+*
+****************************************************************/
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('fonts/opensans-bold-webfont.eot');
+    src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans-bold-webfont.woff2') format('woff2'),
+    url('fonts/opensans-bold-webfont.woff') format('woff'),
+    url('fonts/opensans-bold-webfont.ttf') format('truetype'),
+    url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url('fonts/opensans-extrabold-webfont.eot');
+    src: url('fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans-extrabold-webfont.woff2') format('woff2'),
+    url('fonts/opensans-extrabold-webfont.woff') format('woff'),
+    url('fonts/opensans-extrabold-webfont.ttf') format('truetype'),
+    url('fonts/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('fonts/opensans-light-webfont.eot');
+    src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans-light-webfont.woff2') format('woff2'),
+    url('fonts/opensans-light-webfont.woff') format('woff'),
+    url('fonts/opensans-light-webfont.ttf') format('truetype'),
+    url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fonts/opensans-regular-webfont.eot');
+    src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans-regular-webfont.woff2') format('woff2'),
+    url('fonts/opensans-regular-webfont.woff') format('woff'),
+    url('fonts/opensans-regular-webfont.ttf') format('truetype'),
+    url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('fonts/opensans-semibold-webfont.eot');
+    src: url('fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/opensans-semibold-webfont.woff2') format('woff2'),
+    url('fonts/opensans-semibold-webfont.woff') format('woff'),
+    url('fonts/opensans-semibold-webfont.ttf') format('truetype'),
+    url('fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pf_handbook_promedium';
+    src: url('fonts/pfhandbookpro-medium-webfont.eot');
+    src: url('fonts/pfhandbookpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/pfhandbookpro-medium-webfont.woff2') format('woff2'),
+    url('fonts/pfhandbookpro-medium-webfont.woff') format('woff'),
+    url('fonts/pfhandbookpro-medium-webfont.ttf') format('truetype'),
+    url('fonts/pfhandbookpro-medium-webfont.svg#pf_handbook_promedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pf_handbook_proregular';
+    src: url('fonts/pfhandbookpro-regular-webfont.eot');
+    src: url('fonts/pfhandbookpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/pfhandbookpro-regular-webfont.woff2') format('woff2'),
+    url('fonts/pfhandbookpro-regular-webfont.woff') format('woff'),
+    url('fonts/pfhandbookpro-regular-webfont.ttf') format('truetype'),
+    url('fonts/pfhandbookpro-regular-webfont.svg#pf_handbook_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body{
+    font-family: 'open_sansregular';
+    margin: 0;
+    /*line-height: 1;*/
+}
+img {
+    border: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.b-containerPopup {
+    max-width: 806px;
+    margin: 0 auto;
+    background: url(../img/bg.jpg) top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.b-container__headerPopup {
+    /*background: url(../img/bg.jpg) top center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    display: table;
+    width: 100%;
+}
+
+.b-headerPopup {
+    margin: 2% auto 2% auto !important;
+    text-align: center;
+}
+
+.content_middlePopup {
+    max-width: 896px;
+    padding: 0 1%;
+    margin: 0 auto;
+}
+
+.b-headerPopup {
+    font-size: 0;
+}
+
+.b-headerPopup__leftHeaderPopup {
+    display: inline-block;
+    width:36% ;
+    vertical-align: top;
+}
+
+.leftHeader__imgPopup {
+    max-width: 284px;
+}
+
+.b-header__rightHeaderPopup {
+    display: inline-block;
+    width:64% ;
+    vertical-align: top;
+}
+
+.b-rightHeaderPopup {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.b-rightHeaderPopup__important {
+    font-size: 21px;
+}
+
+.b-rightHeaderPopup__slogan {
+    padding: 13px 30px;
+    border: 3px solid rgba(160, 186, 206, 0.44);
+    background-color: rgba(0, 142, 208, 0.44);
+    margin: 10px 25px 15px 25px
+}
+
+.b-sloganPopup {
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+.b-rightHeaderPopup__questions {
+    font-size: 21px;
+    text-transform: uppercase;
+    margin: 0px 0 8px;
+}
+
+.b-rightHeaderPopup__text {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.b-rightHeaderPopup__otvet {
+    font-size: 30px;
+    margin: 14px 0 4px 0;
+    color: #FF7400;
+}
+
+.b-rightHeaderPopup__textBold {
+    font-size: 18px;
+    margin: 0 0 0 -45px;
+}
+
+.b-rightHeaderPopup__textBottom {
+    font-size: 15px;
+    margin:26px 0 0 ;
+    line-height: 1.1;
+}
+
+.b-container__contentPopup {
+    border-top: 1px solid #ffffff;
+    padding: 0 0 15px 0;
+}
+
+.b-contentPopup__title {
+    font-size: 21px;
+    margin:10px 0 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.ss-form-container{
+    width: 100% !important;
+}
+
+.ss-form-container {
+    font-size: 0 !important;
+}
+
+.b-form__itemPopup {
+    list-style: none outside none !important;
+    margin: 0;
+    background-color: transparent !important;
+    color: black;
+    display: inline-block !important;
+    height: auto !important;
+    padding: 0 !important;
+    vertical-align: top;
+    width: 30% !important;
+    margin: 0 1.5% 0 1.5% !important;
+}
+
+
+.b-form__input {
+    font-family: 'open_sansregular' !important;
+    color: #002a5a !important;
+    font-size: 18px !important;
+    height: auto !important;
+    margin: 0 0 0 0!important;
+    padding: 10px 10px !important;
+    position: relative !important;
+    width: 100% !important;;
+    z-index: 10;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #002958;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.b-form__garantyPopup {
+    font-size: 13px !important;
+    color: #ffffff !important;
+    font-style: italic;
+}
+
+.b-btn__inputPopup {
+    font-size: 19px !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    padding: 12px 35px;
+    background: rgb(255, 113, 18);
+    outline: none;
+    font-family: 'open_sanssemibold';
+    border: 0 !important;
+}
+
+.b-btn__inputPopup:hover {
+    background: rgb(216, 96, 17);
+}
